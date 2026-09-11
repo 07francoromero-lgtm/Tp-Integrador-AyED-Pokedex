@@ -4,7 +4,7 @@
 
 **Fecha:** 09-sep-2026  
 **Tema:** Pokédex  
-**Integrantes:** Franco Romero, Elias Carvallo
+**Integrantes:** Franco Romero
 
 ---
 

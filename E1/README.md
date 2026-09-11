@@ -7,7 +7,6 @@ Repositorio del grupo para el Trabajo Práctico Integrador de Algoritmos y Estru
 | Nombre | Email | GitHub |
 |--------|-------|--------|
 | Franco Romero | 07francoromero@gmail.com | [07francoromero-lgtm](https://github.com/07francoromero-lgtm) |
-| Elias Carvallo | eliascarvallo32@gmail.com | [Eliascarvallo17-v](https://github.com/Eliascarvallo17-v) |
 
 **Tema elegido:** Pokédex
 
