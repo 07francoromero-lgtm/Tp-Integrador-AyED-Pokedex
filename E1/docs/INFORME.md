@@ -1,8 +1,8 @@
 # INFORME TÉCNICO - TP Integrador AyED C2 2026
 
-## Entrega 1 - Estructura Base y Catálogo
+## Entrega 2 - Módulos y recursión del dominio
 
-**Fecha:** 09-sep-2026  
+**Fecha:** 20-sep-2026  
 **Tema:** Pokédex  
 **Integrantes:** Franco Romero
 
@@ -14,6 +14,7 @@ Se implementa un gestor de catálogo Pokédex que permite:
 - Listar el catálogo completo de Pokémon
 - Ver detalles de un Pokémon específico
 - Buscar Pokémon por nombre o tipo
+- Mostrar cadenas de evolución mediante recursión
 - Gestionar un equipo de combate (próximas entregas)
 - Mantener historial de acciones (próximas entregas)
 
@@ -51,7 +52,7 @@ Se implementa un gestor de catálogo Pokédex que permite:
 5. ⏳ **Gestionar equipo**: Pendiente para E3
 6. ⏳ **Historial**: Pendiente para E3
 7. ⏳ **Guardar/Cargar**: Pendiente para E5
-8. ⏳ **Recursión del dominio**: Pendiente para E2 (cadenas de evolución)
+8. ✓ **Recursión del dominio**: recorre cadenas de evolución desde un Pokémon inicial
 9. ⏳ **TADs propios**: Pendiente para E3 (ListaEnlazada, Pila, Cola)
 
 ---
@@ -62,7 +63,8 @@ Se implementa un gestor de catálogo Pokédex que permite:
 src/
 ├── main.py              # CLI principal - bucle de menú
 ├── dominio/
-│   └── pokemon.py       # Clases Pokemon y Pokedex
+│   ├── pokemon.py       # Clases Pokemon y Pokedex
+│   └── evoluciones.py    # CadenaEvolucion y datos de evolución
 ├── tads/                # TADs (E3)
 ├── algoritmos/          # Búsqueda y ordenamiento (E4)
 └── persistencia/        # CSV y binario (E5)
@@ -80,7 +82,23 @@ El programa presenta un menú interactivo que permite acceder a las operaciones 
 
 ---
 
-## 6. Próximos pasos
+## 6. Recursión del dominio
+
+La clase `CadenaEvolucion` trabaja con un diccionario donde cada Pokémon apunta a su siguiente evolución. El caso base ocurre cuando el Pokémon no tiene una evolución siguiente: se devuelve una lista con ese único nombre. En el caso recursivo se devuelve el Pokémon actual y se continúa con la siguiente evolución.
+
+### Traza: Pichu → Pikachu → Raichu
+
+La llamada `CADENA_PICHU.recorrer("Pichu")` se resuelve así:
+
+1. `recorrer("Pichu")`: encuentra como siguiente a `Pikachu`; conserva `Pichu` y llama a `recorrer("Pikachu")`.
+2. `recorrer("Pikachu")`: encuentra como siguiente a `Raichu`; conserva `Pikachu` y llama a `recorrer("Raichu")`.
+3. `recorrer("Raichu")`: no encuentra una siguiente evolución; aplica el caso base y devuelve `["Raichu"]`.
+4. La segunda llamada concatena `Pikachu` y devuelve `["Pikachu", "Raichu"]`.
+5. La primera llamada concatena `Pichu` y devuelve `["Pichu", "Pikachu", "Raichu"]`.
+
+El menú transforma esa lista en el texto `Pichu -> Pikachu -> Raichu`.
+
+## 7. Próximos pasos
 
 - **E2**: Recursión de cadenas de evolución, modulación de código
 - **E3**: Implementar TADs (ListaEnlazada, Pila, Cola), encapsulamiento
@@ -90,7 +108,7 @@ El programa presenta un menú interactivo que permite acceder a las operaciones 
 
 ---
 
-## 7. Excepciones
+## 8. Excepciones
 
 Actualmente se capturan:
 - Entrada inválida del usuario
@@ -100,7 +118,7 @@ Se añadirán excepciones propias en E3.
 
 ---
 
-## 8. Complejidad temporal (E1)
+## 9. Complejidad temporal (E1)
 
 | Operación | Complejidad | Justificación |
 |-----------|-------------|---------------|

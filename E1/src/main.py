@@ -25,7 +25,7 @@ def main():
         print("1. Listar catálogo")
         print("2. Ver detalle de Pokémon")
         print("3. Buscar Pokémon")
-        print("4. Ordenar catálogo")
+        print("4. Ver cadena de evoluciones")
         print("5. Gestionar equipo")
         print("6. Ver historial")
         print("0. Salir")
@@ -42,7 +42,8 @@ def main():
             busqueda = input("Ingresa el nombre o tipo a buscar: ").strip()
             pokedex.buscar(busqueda)
         elif opcion == "4":
-            print("Próximamente...")
+            nombre = input("Ingresa el Pokémon inicial (Enter para Pichu): ").strip()
+            pokedex.mostrar_evoluciones(nombre or "Pichu")
         elif opcion == "5":
             print("Próximamente...")
         elif opcion == "6":

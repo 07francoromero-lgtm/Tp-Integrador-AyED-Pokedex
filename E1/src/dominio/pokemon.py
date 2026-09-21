@@ -2,6 +2,8 @@
 Módulo Pokemon - Clase base para los Pokémon
 """
 
+from src.dominio.evoluciones import CADENA_PICHU
+
 
 class Pokemon:
     """Representa un Pokémon del catálogo."""
@@ -64,10 +66,12 @@ class Pokedex:
         """Carga datos de demostración para pruebas."""
         # Datos de ejemplo: Pokémon de la Gen 1
         pokemon_demo = [
+            Pokemon(172, "Pichu", "Eléctrico", 20, 40, 15, 60, 2),
             Pokemon(1, "Bulbasaur", "Planta/Veneno", 45, 49, 49, 45, 1),
             Pokemon(4, "Charmander", "Fuego", 39, 52, 43, 65, 1),
             Pokemon(7, "Squirtle", "Agua", 44, 48, 65, 43, 1),
             Pokemon(25, "Pikachu", "Eléctrico", 35, 55, 40, 90, 1),
+            Pokemon(26, "Raichu", "Eléctrico", 60, 90, 55, 110, 1),
             Pokemon(39, "Jigglypuff", "Normal/Hada", 115, 40, 20, 20, 1),
         ]
         self.pokemon_list = pokemon_demo
@@ -121,3 +125,10 @@ class Pokedex:
         for pokemon in resultados:
             print(f"{pokemon.id:<5} {pokemon.nombre:<15} {pokemon.tipo:<20}")
         print(f"\nTotal: {len(resultados)} resultado(s)")
+
+    def mostrar_evoluciones(self, nombre="Pichu"):
+        """Muestra la cadena de evoluciones desde el Pokémon indicado."""
+        cadena = CADENA_PICHU.recorrer(nombre)
+        print(f"\n--- CADENA DE EVOLUCIONES ---")
+        print(" -> ".join(cadena))
+        return cadena

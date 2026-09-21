@@ -1,6 +1,6 @@
 # PROTOCOLO DE PRUEBAS - TP Integrador AyED C2 2026
 
-## Entrega 1 - Casos de prueba
+## Entrega 2 - Casos de prueba
 
 **Tema:** Pokédex  
 **Objetivo:** Validar que el catálogo se carga y las operaciones básicas funcionan
@@ -66,11 +66,33 @@
 
 ---
 
+### CP6: Cadena completa de evoluciones
+| Paso | Descripción | Resultado esperado |
+|------|-------------|-------------------|
+| 1 | Ejecutar la opción "4" | Solicita el Pokémon inicial |
+| 2 | Ingresar "Pichu" | Muestra `Pichu -> Pikachu -> Raichu` |
+| 3 | Verificar el resultado | Incluye las tres evoluciones y respeta el orden |
+
+### CP7: Caso base de la recursión
+| Paso | Descripción | Resultado esperado |
+|------|-------------|-------------------|
+| 1 | Ejecutar la opción "4" | Solicita el Pokémon inicial |
+| 2 | Ingresar "Raichu" | Muestra únicamente `Raichu` |
+| 3 | Verificar el resultado | No agrega una evolución inexistente |
+
+### CP8: Carga de Pokémon de la cadena
+| Paso | Descripción | Resultado esperado |
+|------|-------------|-------------------|
+| 1 | Ejecutar la opción "1" | Muestra el catálogo |
+| 2 | Revisar los nombres | Aparecen Pichu, Pikachu y Raichu |
+| 3 | Verificar el total | El catálogo contiene 7 Pokémon |
+
 ## Casos pendientes (futuras entregas)
 
 - CP6: Ordenar por ataque
 - CP7: Ordenar por velocidad
 - CP8: Agregar Pokémon al equipo
-- CP9: Recursión de evoluciones
-- CP10: Guardar/cargar CSV
-- CP11: Guardar/cargar binario
+- CP9: Ordenar por ataque
+- CP10: Agregar Pokémon al equipo
+- CP11: Guardar/cargar CSV
+- CP12: Guardar/cargar binario

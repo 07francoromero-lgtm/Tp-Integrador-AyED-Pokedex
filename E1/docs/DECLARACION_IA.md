@@ -28,3 +28,21 @@ En cada entrega, agregar una nueva sección con:
 - Herramientas usadas (ChatGPT, Cursor, Copilot, etc.)
 - Para qué se usó (ej: "refactoring de búsqueda", "debug de recursión")
 - Qué reescribió el grupo
+
+## Entrega 2
+
+**Fecha:** 20-sep-2026
+
+**Herramienta utilizada:**
+- GitHub Copilot
+
+**Uso específico:**
+- Separación de la lógica de evoluciones en `src/dominio/evoluciones.py`
+- Revisión de la recursión de la cadena Pichu -> Pikachu -> Raichu
+- Actualización de la documentación y del protocolo de pruebas
+
+**Modificaciones realizadas:**
+- Se revisó y adaptó el código generado para conservar la compatibilidad con E1.
+- Se verificó el caso base y el caso recursivo con datos reales de la Pokédex.
+
+**Declaración:** El grupo entiende y puede defender todo el código entregado.
