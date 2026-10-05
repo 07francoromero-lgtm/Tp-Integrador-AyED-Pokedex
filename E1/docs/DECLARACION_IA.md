@@ -19,6 +19,24 @@
 
 **Declaración:** El grupo entiende y puede defender todo el código entregado.
 
+## Entrega 3
+
+**Fecha:** 04-oct-2026
+
+**Herramienta utilizada:**
+- GitHub Copilot
+
+**Uso específico:**
+- Implementación y revisión de `ListaEnlazada`, `Pila` y `Cola` propios.
+- Integración de equipo limitado, historial deshacible, cola de turnos y excepciones en la Pokédex.
+- Preparación y ejecución de pruebas P05–P08 y regresión de E1/E2.
+
+**Modificaciones realizadas:**
+- Se adaptó la implementación al dominio Pokédex y a la organización existente del repositorio.
+- Se ejecutaron las pruebas y se corrigieron los problemas encontrados durante la integración.
+
+**Declaración:** La entrega se realizó individualmente; el autor revisó y probó las estructuras y puede explicar su funcionamiento.
+
 ---
 
 ## Instrucciones para actualizar

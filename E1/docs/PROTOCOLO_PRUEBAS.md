@@ -87,12 +87,30 @@
 | 2 | Revisar los nombres | Aparecen Pichu, Pikachu y Raichu |
 | 3 | Verificar el total | El catálogo contiene 7 Pokémon |
 
-## Casos pendientes (futuras entregas)
+## Resultados de E2
 
-- CP6: Ordenar por ataque
-- CP7: Ordenar por velocidad
-- CP8: Agregar Pokémon al equipo
+| Caso | Prueba | Resultado |
+|------|--------|-----------|
+| CP6 | Cadena Pichu -> Pikachu -> Raichu | pasa |
+| CP7 | Caso base Raichu sin evolución siguiente | pasa |
+| CP8 | Catálogo incluye Pichu, Pikachu y Raichu | pasa |
+
+## Próximas entregas
+
 - CP9: Ordenar por ataque
-- CP10: Agregar Pokémon al equipo
+- CP10: Agregar Pokémon al equipo de combate
 - CP11: Guardar/cargar CSV
 - CP12: Guardar/cargar binario
+
+## Entrega 3 - Casos ejecutados
+
+**Comando:** `python test_e3.py`, ejecutado desde `E1/` el 04-oct-2026.
+
+| Caso | Prueba | Resultado esperado | Resultado |
+|------|--------|-------------------|-----------|
+| P05 | Insertar al inicio y al final; recorrer con `for`; buscar, eliminar y consultar tamaño. | Orden y tamaño correctos; buscar un ausente lanza `ItemNoEncontradoError`. | pasa |
+| P06 | Apilar y desapilar dos acciones; comprobar el historial del equipo y deshacer un alta. | LIFO correcto; pila vacía lanza `PilaVaciaError`; el equipo queda vacío tras deshacer. | pasa |
+| P07 | Encolar dos Pokémon, consultar el frente y procesar ambos turnos. | FIFO conserva el orden; cola vacía lanza `ColaVaciaError`. | pasa |
+| P08 | Agregar seis Pokémon al equipo e intentar agregar un séptimo desde el menú; quitar uno ausente. | El séptimo lanza `ColeccionLlenaError`, que el menú captura; el ausente lanza `ItemNoEncontradoError`; el equipo conserva seis integrantes. | pasa |
+
+**Resultado de la ejecución:** 4 tests ejecutados, 4 OK. También se ejecutó `python test_e1.py`: todos los tests anteriores pasan.
